@@ -1,0 +1,25 @@
+storage: none
+framework: net7.0
+source https://api.nuget.org/v3/index.json
+
+nuget AngleSharp 
+nuget Autofac
+nuget Autofac.Extensions.DependencyInjection
+nuget Catalyst
+nuget Catalyst.Models.English
+nuget Humanizer.Core
+nuget JetBrains.Annotations
+nuget Newtonsoft.Json
+nuget NLog
+nuget System.Reactive.Linq
+
+group _UI
+
+    storage: none
+    framework: net7.0
+    source https://api.nuget.org/v3/index.json
+
+    nuget CommunityToolkit.Maui
+    nuget ReactiveUI
+    nuget ReactiveUI.Fody
+    nuget ReactiveUI.Maui

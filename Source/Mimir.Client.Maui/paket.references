@@ -1,0 +1,10 @@
+﻿Autofac
+Autofac.Extensions.DependencyInjection
+Catalyst
+Catalyst.Models.English
+
+group _UI
+    CommunityToolkit.Maui
+    ReactiveUI
+    ReactiveUI.Fody
+    ReactiveUI.Maui

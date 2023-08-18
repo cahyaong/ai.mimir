@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--  TODO (SHOULD): Fix entry to keep width when query is entered!  -->
+<ContentPage
+  x:Class="nGratis.AI.Mimir.Client.Maui.DataGatheringPage"
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:self="using:nGratis.AI.Mimir.Client.Maui"
+  Title="Data Gathering"
+  x:DataType="self:DataGatheringViewModel">
+  <Grid
+    Margin="32,16"
+    ColumnDefinitions="1*,1*,1*,1*,1*,1*,1*,1*,1*,1*,1*,1*"
+    ColumnSpacing="16"
+    RowDefinitions="Auto, *"
+    RowSpacing="16">
+    <Grid
+      Grid.Row="0"
+      Grid.Column="0"
+      Grid.ColumnSpan="6"
+      ColumnDefinitions="1*,1*,1*,1*,1*,1*"
+      ColumnSpacing="16">
+      <Entry
+        Grid.Column="0"
+        Grid.ColumnSpan="4"
+        IsEnabled="{Binding IsFetching, Mode=OneWay, Converter={StaticResource InvertedBoolConverter}}"
+        Text="{Binding Query, Mode=OneWayToSource}" />
+      <Button
+        Grid.Column="4"
+        Grid.ColumnSpan="2"
+        Command="{Binding FetchingContentCommand, Mode=OneWay}"
+        Text="Fetch Content" />
+    </Grid>
+    <ScrollView
+      Grid.Row="1"
+      Grid.Column="0"
+      Grid.ColumnSpan="12">
+      <Label Text="{Binding Content, Mode=OneWay}" />
+    </ScrollView>
+  </Grid>
+</ContentPage>

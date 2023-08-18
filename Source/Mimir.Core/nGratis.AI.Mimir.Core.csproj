@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="nGratis.AI.Mimir.Core.csproj.DotSettings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Mimir.Shared\GlobalAssemblyInfo.cs" Link="Properties\GlobalAssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\External\cop.olympus\Source\Olympus.Contract\nGratis.Cop.Olympus.Contract.csproj" />
+    <ProjectReference Include="..\..\External\cop.olympus\Source\Olympus.Framework\nGratis.Cop.Olympus.Framework.csproj" />
+  </ItemGroup>
+  <Import Project="..\Mimir.Shared\nGratis.AI.Mimir.Production.targets" />
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

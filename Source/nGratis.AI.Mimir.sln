@@ -5,6 +5,20 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nGratis.AI.Mimir.Client.Maui", "Mimir.Client.Maui\nGratis.AI.Mimir.Client.Maui.csproj", "{C8BEF51B-19D9-42F3-A353-8A26610F23D5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{8329E567-43C7-4694-BD74-F3942A8951B4}"
+	ProjectSection(SolutionItems) = preProject
+		Mimir.Shared\nGratis.AI.Mimir.Production.targets = Mimir.Shared\nGratis.AI.Mimir.Production.targets
+		..\paket.dependencies = ..\paket.dependencies
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nGratis.AI.Mimir.Core", "Mimir.Core\nGratis.AI.Mimir.Core.csproj", "{8023701C-8209-4E73-B1CF-A8A35D4070A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{2D774369-D385-4E2E-B9E8-2EEEC1577197}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nGratis.Cop.Olympus.Contract", "..\External\cop.olympus\Source\Olympus.Contract\nGratis.Cop.Olympus.Contract.csproj", "{34E77B60-5A5B-4A2B-958B-ACE767497630}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nGratis.Cop.Olympus.Framework", "..\External\cop.olympus\Source\Olympus.Framework\nGratis.Cop.Olympus.Framework.csproj", "{6A067EEC-0AD6-4FD9-AD85-53A0003F5892}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +29,25 @@ Global
 		{C8BEF51B-19D9-42F3-A353-8A26610F23D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8BEF51B-19D9-42F3-A353-8A26610F23D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8BEF51B-19D9-42F3-A353-8A26610F23D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8023701C-8209-4E73-B1CF-A8A35D4070A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8023701C-8209-4E73-B1CF-A8A35D4070A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8023701C-8209-4E73-B1CF-A8A35D4070A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8023701C-8209-4E73-B1CF-A8A35D4070A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34E77B60-5A5B-4A2B-958B-ACE767497630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34E77B60-5A5B-4A2B-958B-ACE767497630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34E77B60-5A5B-4A2B-958B-ACE767497630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34E77B60-5A5B-4A2B-958B-ACE767497630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A067EEC-0AD6-4FD9-AD85-53A0003F5892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A067EEC-0AD6-4FD9-AD85-53A0003F5892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A067EEC-0AD6-4FD9-AD85-53A0003F5892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A067EEC-0AD6-4FD9-AD85-53A0003F5892}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{34E77B60-5A5B-4A2B-958B-ACE767497630} = {2D774369-D385-4E2E-B9E8-2EEEC1577197}
+		{6A067EEC-0AD6-4FD9-AD85-53A0003F5892} = {2D774369-D385-4E2E-B9E8-2EEEC1577197}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}

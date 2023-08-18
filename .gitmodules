@@ -1,0 +1,3 @@
+[submodule "External/cop.olympus"]
+	path = External/cop.olympus
+	url = https://github.com/cahyaong/cop.olympus.git

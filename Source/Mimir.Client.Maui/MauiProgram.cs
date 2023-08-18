@@ -9,15 +9,32 @@
 
 namespace nGratis.AI.Mimir.Client.Maui;
 
+using System.Runtime.Versioning;
+using Autofac.Extensions.DependencyInjection;
+using CommunityToolkit.Maui;
+
+[SupportedOSPlatform("windows")]
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
     {
-#pragma warning disable CA1416
         return MauiApp
             .CreateBuilder()
             .UseMauiApp<App>()
+            .UseMauiCommunityToolkit()
+            .UseAutofacInjection()
             .Build();
-#pragma warning restore CA1416
+    }
+
+    private static MauiAppBuilder UseAutofacInjection(this MauiAppBuilder appBuilder)
+    {
+        appBuilder.ConfigureContainer(
+            new AutofacServiceProviderFactory(),
+            containerBuilder => containerBuilder
+                .RegisterViewModel()
+                .RegisterStorage()
+                .RegisterDataPipeline());
+
+        return appBuilder;
     }
 }
