@@ -11,7 +11,6 @@ namespace nGratis.AI.Mimir.Client.Maui;
 
 using System.Reactive;
 using nGratis.AI.Mimir.Core;
-using nGratis.Cop.Olympus.Contract;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
 
@@ -25,7 +24,7 @@ internal class DataGatheringViewModel : ReactiveObject
 
         this.Query = string.Empty;
         this.IsFetching = false;
-        this.Content = DefinedText.Empty;
+        this.Article = Article.Empty;
 
         this.FetchingContentCommand = ReactiveCommand.CreateFromTask(
             this.FetchContentAsync,
@@ -44,7 +43,7 @@ internal class DataGatheringViewModel : ReactiveObject
     public bool IsFetching { get; private set; }
 
     [Reactive]
-    public string Content { get; private set; }
+    public Article Article { get; private set; }
 
     public ReactiveCommand<Unit, Unit> FetchingContentCommand { get; }
 
@@ -54,15 +53,11 @@ internal class DataGatheringViewModel : ReactiveObject
 
         try
         {
-            var article = await this._dataFetcher.FetchArticleAsync(this.Query);
-
-            this.Content = article.Sections.Any()
-                ? string.Join(" ", article.Sections.First().Paragraphs)
-                : DefinedText.Empty;
+            this.Article = await this._dataFetcher.FetchArticleAsync(this.Query);
         }
         catch (MimirException)
         {
-            this.Content = DefinedText.Empty;
+            this.Article = Article.Empty;
         }
 
         this.IsFetching = false;

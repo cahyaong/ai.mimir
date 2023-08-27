@@ -20,6 +20,12 @@ public record Article
         this.Sections = ImmutableArray<Section>.Empty;
     }
 
+    public static Article Empty { get; } = new()
+    {
+        Title = DefinedText.Empty,
+        Sections = ImmutableArray<Section>.Empty
+    };
+
     public string Title { get; private init; }
 
     public IEnumerable<Section> Sections { get; private init; }

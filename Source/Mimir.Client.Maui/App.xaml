@@ -10,6 +10,7 @@
         <ResourceDictionary>
           <toolkit:InvertedBoolConverter x:Key="InvertedBoolConverter" />
         </ResourceDictionary>
+        <ResourceDictionary Source="/Resources/Styles/Mimir.Style.AweArticleVisualizer.xaml" />
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
   </Application.Resources>

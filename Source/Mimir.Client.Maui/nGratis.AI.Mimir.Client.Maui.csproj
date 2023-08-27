@@ -29,15 +29,17 @@
     <Compile Include="..\Mimir.Shared\GlobalAssemblyInfo.cs" Link="Properties\GlobalAssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Mimir.Core\nGratis.AI.Mimir.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Page.Data\DataGatheringPage.xaml.cs">
+    <Compile Update="Pages\DataGatheringPage.xaml.cs">
       <DependentUpon>DataGatheringPage.xaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <MauiXaml Update="Resources\Styles\Mimir.Style.AweArticleVisualizer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
   </ItemGroup>
   <Import Project="..\Mimir.Shared\nGratis.AI.Mimir.Production.targets" />
   <Import Project="..\..\.paket\Paket.Restore.targets" />

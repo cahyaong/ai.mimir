@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--  TODO (SHOULD): Fix entry to keep width when query is entered!  -->
 <ContentPage
   x:Class="nGratis.AI.Mimir.Client.Maui.DataGatheringPage"
   xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -30,11 +29,10 @@
         Command="{Binding FetchingContentCommand, Mode=OneWay}"
         Text="Fetch Content" />
     </Grid>
-    <ScrollView
+    <self:AweArticleVisualizer
       Grid.Row="1"
       Grid.Column="0"
-      Grid.ColumnSpan="12">
-      <Label Text="{Binding Content, Mode=OneWay}" />
-    </ScrollView>
+      Grid.ColumnSpan="12"
+      Article="{Binding Article, Mode=OneWay}" />
   </Grid>
 </ContentPage>

@@ -21,6 +21,7 @@ public static class MauiProgram
         return MauiApp
             .CreateBuilder()
             .UseMauiApp<App>()
+            .UseWindowsFont()
             .UseMauiCommunityToolkit()
             .UseAutofacInjection()
             .Build();
@@ -36,5 +37,14 @@ public static class MauiProgram
                 .RegisterDataPipeline());
 
         return appBuilder;
+    }
+
+    private static MauiAppBuilder UseWindowsFont(this MauiAppBuilder appBuilder)
+    {
+        return appBuilder.ConfigureFonts(fonts =>
+        {
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSans-Regular");
+            fonts.AddFont("OpenSans-Semibold.ttf", "OpenSans-Semibold");
+        });
     }
 }
