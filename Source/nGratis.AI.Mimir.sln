@@ -1,10 +1,8 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nGratis.AI.Mimir.Client.Maui", "Mimir.Client.Maui\nGratis.AI.Mimir.Client.Maui.csproj", "{C8BEF51B-19D9-42F3-A353-8A26610F23D5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{8329E567-43C7-4694-BD74-F3942A8951B4}"
 	ProjectSection(SolutionItems) = preProject
 		Mimir.Shared\nGratis.AI.Mimir.Production.targets = Mimir.Shared\nGratis.AI.Mimir.Production.targets
@@ -12,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{8329E567
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nGratis.AI.Mimir.Core", "Mimir.Core\nGratis.AI.Mimir.Core.csproj", "{8023701C-8209-4E73-B1CF-A8A35D4070A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nGratis.AI.Mimir.Client.Cmd", "Mimir.Client.Cmd\nGratis.AI.Mimir.Client.Cmd.csproj", "{C5E914BB-18AB-4396-BB74-16DAF2164533}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{2D774369-D385-4E2E-B9E8-2EEEC1577197}"
 EndProject
@@ -25,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C8BEF51B-19D9-42F3-A353-8A26610F23D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C8BEF51B-19D9-42F3-A353-8A26610F23D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C8BEF51B-19D9-42F3-A353-8A26610F23D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C8BEF51B-19D9-42F3-A353-8A26610F23D5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8023701C-8209-4E73-B1CF-A8A35D4070A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8023701C-8209-4E73-B1CF-A8A35D4070A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8023701C-8209-4E73-B1CF-A8A35D4070A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,6 +37,10 @@ Global
 		{6A067EEC-0AD6-4FD9-AD85-53A0003F5892}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A067EEC-0AD6-4FD9-AD85-53A0003F5892}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A067EEC-0AD6-4FD9-AD85-53A0003F5892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5E914BB-18AB-4396-BB74-16DAF2164533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5E914BB-18AB-4396-BB74-16DAF2164533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5E914BB-18AB-4396-BB74-16DAF2164533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5E914BB-18AB-4396-BB74-16DAF2164533}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

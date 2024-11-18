@@ -1,0 +1,7 @@
+﻿Autofac
+JetBrains.Annotations
+
+group _Console
+    CommandLineParser
+    Spectre.Console
+    Spectre.Console.Cli
