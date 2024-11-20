@@ -9,9 +9,21 @@
 
 namespace nGratis.AI.Mimir.Client.Cmd;
 
+using System.Diagnostics;
+
 public class Program
 {
-    private static void Main(string[] args)
+    private static async Task Main(string[] args)
     {
+        using var appBootstrapper = new AppBootstrapper();
+
+        var dataFetcher = appBootstrapper.CreateDataFetcher();
+        var article = await dataFetcher.FetchArticleAsync("Ancient Greece");
+
+        if (Debugger.IsAttached)
+        {
+            Console.WriteLine("Press <ENTER> key to continue...");
+            Console.ReadLine();
+        }
     }
 }
